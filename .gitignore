@@ -1,0 +1,16 @@
+calculator-js/node_modules/**/*
+calculator-js/.expo/*
+calculator-js/.expo-shared/*
+calculator-js/npm-debug.*
+calculator-js/*.jks
+calculator-js/*.p8
+calculator-js/*.p12
+calculator-js/*.key
+calculator-js/*.mobileprovision
+calculator-js/*.orig.*
+calculator-js/web-build/
+calculator-js/web-report/
+calculator-js/yarn.lock
+
+# macOS
+calculator-js/.DS_Store
