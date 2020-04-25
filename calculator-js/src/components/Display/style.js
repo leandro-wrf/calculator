@@ -8,6 +8,12 @@ export default StyleSheet.create({
 		justifyContent: 'center',
 	},
 
+	history: {
+		color: 'gray',
+		fontSize: 16,
+		textAlign: 'right',
+	},
+
 	text: {
 		color: '#333',
 		fontSize: 70,

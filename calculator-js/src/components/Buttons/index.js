@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, FlatList } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 import styles from './style';
@@ -10,7 +10,7 @@ const B2 = ['4', '5', '6', '×'];
 const B3 = ['7', '8', '9', '-'];
 const B4 = ['.', '0', '=', '+'];
 
-export default function Buttons({ handleButton }) {
+export default function Buttons({ handleModules }) {
 	return (
 		<View style={styles.container}>
 			<View style={styles.row}>
@@ -18,7 +18,7 @@ export default function Buttons({ handleButton }) {
 					<TouchableOpacity
 						key={button.toString()}
 						style={styles.button}
-						onPress={() => handleButton(button)}
+						onPress={() => handleModules(button)}
 					>
 						<Text style={styles.text}>{button}</Text>
 					</TouchableOpacity>
@@ -26,7 +26,7 @@ export default function Buttons({ handleButton }) {
 
 				<TouchableOpacity
 					style={styles.buttonIcon}
-					onPress={() => handleButton('X')}
+					onPress={() => handleModules('X')}
 				>
 					<Feather name="delete" size={45} color="#fff" />
 				</TouchableOpacity>
@@ -37,7 +37,7 @@ export default function Buttons({ handleButton }) {
 					<TouchableOpacity
 						key={button.toString()}
 						style={styles.button}
-						onPress={() => handleButton(button)}
+						onPress={() => handleModules(button)}
 					>
 						<Text style={styles.text}>{button}</Text>
 					</TouchableOpacity>
@@ -49,7 +49,7 @@ export default function Buttons({ handleButton }) {
 					<TouchableOpacity
 						key={button.toString()}
 						style={styles.button}
-						onPress={() => handleButton(button)}
+						onPress={() => handleModules(button)}
 					>
 						<Text style={styles.text}>{button}</Text>
 					</TouchableOpacity>
@@ -61,7 +61,7 @@ export default function Buttons({ handleButton }) {
 					<TouchableOpacity
 						key={button.toString()}
 						style={styles.button}
-						onPress={() => handleButton(button)}
+						onPress={() => handleModules(button)}
 					>
 						<Text style={styles.text}>{button}</Text>
 					</TouchableOpacity>
@@ -73,7 +73,7 @@ export default function Buttons({ handleButton }) {
 					<TouchableOpacity
 						key={button.toString()}
 						style={styles.button}
-						onPress={() => handleButton(button)}
+						onPress={() => handleModules(button)}
 					>
 						<Text style={styles.text}>{button}</Text>
 					</TouchableOpacity>
