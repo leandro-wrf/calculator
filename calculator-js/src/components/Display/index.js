@@ -1,13 +1,12 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React from 'react'
 
-import styles from './style';
+import { Container, History, Value } from '../../styles/display'
 
-export default function Display({ value,history }) {
-	return (
-		<View style={styles.container}>
-			<Text style={styles.history}>{history}</Text>
-			<Text style={styles.text}>{value}</Text>
-		</View>
-	);
+export default function Display({ value, history }) {
+  return (
+    <Container>
+      <History>{history}</History>
+      <Value>{value}</Value>
+    </Container>
+  )
 }

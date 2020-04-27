@@ -37,5 +37,5 @@ https://github.com/florinpop17/app-ideas
         be carried out to the maximum number of decimal places entered for any one
         number.
 -   [ ] Update project to Typescript.
--   [ ] Add styled-components on project.
+-   [x] Add styled-components on project.
 -   [ ] Add operations history and a preview of the result.

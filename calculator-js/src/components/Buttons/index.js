@@ -1,84 +1,60 @@
-import React from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
-import { Feather } from '@expo/vector-icons';
+import React from 'react'
+import { Feather } from '@expo/vector-icons'
 
-import styles from './style';
+import { Container, Row, Button, ButtonIcon, Text } from '../../styles/buttons'
 
-const B0 = ['AC', 'C', '(±)'];
-const B1 = ['1', '2', '3', '÷'];
-const B2 = ['4', '5', '6', '×'];
-const B3 = ['7', '8', '9', '-'];
-const B4 = ['.', '0', '=', '+'];
+const B0 = ['AC', 'C', '(±)']
+const B1 = ['1', '2', '3', '÷']
+const B2 = ['4', '5', '6', '×']
+const B3 = ['7', '8', '9', '-']
+const B4 = ['.', '0', '=', '+']
 
 export default function Buttons({ handleModules }) {
 	return (
-		<View style={styles.container}>
-			<View style={styles.row}>
+		<Container>
+			<Row>
 				{B0.map((button) => (
-					<TouchableOpacity
-						key={button.toString()}
-						style={styles.button}
-						onPress={() => handleModules(button)}
-					>
-						<Text style={styles.text}>{button}</Text>
-					</TouchableOpacity>
+					<Button key={button.toString()} onPress={() => handleModules(button)}>
+						<Text>{button}</Text>
+					</Button>
 				))}
 
-				<TouchableOpacity
-					style={styles.buttonIcon}
-					onPress={() => handleModules('X')}
-				>
+				<ButtonIcon onPress={() => handleModules('X')}>
 					<Feather name="delete" size={45} color="#fff" />
-				</TouchableOpacity>
-			</View>
+				</ButtonIcon>
+			</Row>
 
-			<View style={styles.row}>
+			<Row>
 				{B1.map((button) => (
-					<TouchableOpacity
-						key={button.toString()}
-						style={styles.button}
-						onPress={() => handleModules(button)}
-					>
-						<Text style={styles.text}>{button}</Text>
-					</TouchableOpacity>
+					<Button key={button.toString()} onPress={() => handleModules(button)}>
+						<Text>{button}</Text>
+					</Button>
 				))}
-			</View>
+			</Row>
 
-			<View style={styles.row}>
+			<Row>
 				{B2.map((button) => (
-					<TouchableOpacity
-						key={button.toString()}
-						style={styles.button}
-						onPress={() => handleModules(button)}
-					>
-						<Text style={styles.text}>{button}</Text>
-					</TouchableOpacity>
+					<Button key={button.toString()} onPress={() => handleModules(button)}>
+						<Text>{button}</Text>
+					</Button>
 				))}
-			</View>
+			</Row>
 
-			<View style={styles.row}>
+			<Row>
 				{B3.map((button) => (
-					<TouchableOpacity
-						key={button.toString()}
-						style={styles.button}
-						onPress={() => handleModules(button)}
-					>
-						<Text style={styles.text}>{button}</Text>
-					</TouchableOpacity>
+					<Button key={button.toString()} onPress={() => handleModules(button)}>
+						<Text>{button}</Text>
+					</Button>
 				))}
-			</View>
+			</Row>
 
-			<View style={styles.row}>
+			<Row>
 				{B4.map((button) => (
-					<TouchableOpacity
-						key={button.toString()}
-						style={styles.button}
-						onPress={() => handleModules(button)}
-					>
-						<Text style={styles.text}>{button}</Text>
-					</TouchableOpacity>
+					<Button key={button.toString()} onPress={() => handleModules(button)}>
+						<Text>{button}</Text>
+					</Button>
 				))}
-			</View>
-		</View>
-	);
+			</Row>
+		</Container>
+	)
 }
