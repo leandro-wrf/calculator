@@ -1,6 +1,8 @@
 # Calculator
 
-![calculator](images/calculator-js.png)
+<img src="images/calculator-js.png">
+<img src="images/history.jpg">
+<img src="images/preview.jpg">
 
 ## Reference of project
 
