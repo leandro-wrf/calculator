@@ -1,8 +1,8 @@
 # Calculator
 <p align="center">
-  <img alt="Calculator" src="./images/calculator-js.png" width="200px" />
+  <img alt="Calculator" src="./images/calculator.png" width="200px" />
   <img alt="History" src="./images/history.jpg" width="200px" />
-  <img alt="Preview" src="images/preview.jpg" wdith="200px"/>
+  <img alt="Preview" src="images/preview.jpg" width="200px"/>
 </p>
 
 ## Reference of project
