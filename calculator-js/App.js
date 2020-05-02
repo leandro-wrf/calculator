@@ -1,27 +1,35 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import { Container } from './src/styles/global'
+import { Container } from './src/styles/global';
 
-import Display from './src/components/Display'
-import Buttons from './src/components/Buttons'
-import handleClearAll from './src/utils/handleClearAll'
-import handleClear from './src/utils/handleClear'
-import handleDelete from './src/utils/handleDelete'
-import handleResult from './src/utils/handleResult'
-import handlePlusMinus from './src/utils/handlePlusMinus'
-import handleOperator from './src/utils/handleOperator.js'
-import handleButtonPress from './src/utils/handleButtonPress'
+import Display from './src/components/Display';
+import Buttons from './src/components/Buttons';
+import handleClearAll from './src/utils/handleClearAll';
+import handleClear from './src/utils/handleClear';
+import handleDelete from './src/utils/handleDelete';
+import handleResult from './src/utils/handleResult';
+import handlePlusMinus from './src/utils/handlePlusMinus';
+import handleOperator from './src/utils/handleOperator';
+import handleButtonPress from './src/utils/handleButtonPress';
 
 export default function App() {
-  const [value, setValue] = useState('0')
-  const [operator, setOperator] = useState('')
-  const [first, setFirst] = useState('0')
-  const [second, setSecond] = useState('')
-  const [history, setHistory] = useState('')
+  const [value, setValue] = useState('0');
+  const [operator, setOperator] = useState('');
+  const [first, setFirst] = useState('0');
+  const [second, setSecond] = useState('');
+  const [history, setHistory] = useState('');
+  const [preview, setPreview] = useState('');
 
   function handleModules(button) {
     if (button === 'AC')
-      handleClearAll(setValue, setOperator, setFirst, setSecond, setHistory)
+      handleClearAll(
+        setValue,
+        setOperator,
+        setFirst,
+        setSecond,
+        setHistory,
+        setPreview
+      );
     else if (button === 'C')
       handleClear(
         operator,
@@ -31,9 +39,9 @@ export default function App() {
         setOperator,
         setFirst,
         setSecond
-      )
+      );
     else if (button === 'X')
-      handleDelete(operator, value, setValue, setFirst, setSecond)
+      handleDelete(operator, value, setValue, setFirst, setSecond);
     else if (button === '=')
       handleResult(
         operator,
@@ -45,9 +53,9 @@ export default function App() {
         setFirst,
         setSecond,
         setHistory
-      )
+      );
     else if (button === '(±)')
-      handlePlusMinus(value, operator, setValue, setFirst, setSecond)
+      handlePlusMinus(value, operator, setValue, setFirst, setSecond);
     else if (
       button === '+' ||
       button === '-' ||
@@ -61,7 +69,7 @@ export default function App() {
         setValue,
         setOperator,
         setHistory
-      )
+      );
     else
       handleButtonPress(
         button,
@@ -72,14 +80,15 @@ export default function App() {
         setValue,
         setFirst,
         setSecond,
-        setHistory
-      )
+        setHistory,
+        setPreview
+      );
   }
 
   return (
     <Container>
-      <Display value={value} history={history} />
+      <Display value={value} history={history} preview={preview} />
       <Buttons handleModules={handleModules} />
     </Container>
-  )
+  );
 }
