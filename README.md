@@ -38,4 +38,4 @@ https://github.com/florinpop17/app-ideas
         number.
 -   [ ] Update project to Typescript.
 -   [x] Add styled-components on project.
--   [ ] Add operations history and a preview of the result.
+-   [x] Add operations history and a preview of the result.
